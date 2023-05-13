@@ -5,19 +5,21 @@
   box-sizing: border-box;
 }
 
-/* Style the navigation bar */
+body {
+  overflow: hidden;
+}
+
 .nav {
-  background-color: black;
+  background-color: #7ac78a;
   color: white;
-  height: 30px;
+  height: 40px;
   padding: 0 20px;
   position: fixed;
-  /* top: 0; */
   width: 100%;
   z-index: 999;
 }
 
-/* Style the menu items */
+
 .nav__menu {
   display: flex;
   align-items: center;
@@ -25,26 +27,26 @@
 
 .nav__list {
   display: flex;
-  list-style: none;
+  list-style-type: none;
   margin-left: auto;
-}
-
-.nav__item {
-  margin-right: 1rem;
+  padding: 10px;
+  overflow: hidden;
 }
 
 .nav__link {
   color: white;
+  text-align: center;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: 300;
-  padding: 0.5rem;
+  padding: 14px 16px;
   transition: color 0.3s ease;
 }
 
 /* Add hover effect on menu items */
 .nav__link:hover {
-  color: #999;
+  background-color: #5e975f;
+  color: white;
 }
 
 /* Style the toggle button for mobile view */
@@ -55,9 +57,15 @@
   display: none;
 }
 
+.highlight
+{
+  background-color: #7ac78a; 
+  color:black;
+}
+
 .about {
   padding: 100px 0;
-  margin-top: -25px;
+  margin-top: 0px;
 }
 
 .l-header {
@@ -129,7 +137,7 @@
 
 .about__social-icons a {
   margin: 0 10px;
-  color: #333;
+  color: #5e975f;
   font-size: 24px;
   transition: all 0.3s ease;
 }
