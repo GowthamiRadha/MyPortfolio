@@ -158,6 +158,10 @@ html {
 
 
 .portfolio__container {
+  display: grid;
+  background: #fff;
+  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr;
   max-width: 1000px;
   margin: 20px auto;
 }
@@ -233,21 +237,6 @@ html {
   font-size: 30px;
   font-weight: bold;
   margin-bottom: 20px;
-}
-
-.portfolio .row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin: -10px;
-  margin-bottom: 30px;
-}
-
-.portfolio .col {
-  flex: 0 0 calc(33.33% - 20px);
-  margin-bottom: 40px;
-  padding: 10x;
-  margin: 10px;
 }
 
 @keyframes animateBg {
