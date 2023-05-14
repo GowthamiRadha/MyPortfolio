@@ -343,4 +343,39 @@ html {
 		width:100vh;
 		overflow:hidden;
 	}
+
+  
+  .about__container {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+
+  .about__img {
+    justify-self: center;
+    margin-left: 0;
+  }
+
+  .about__subtitle {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .about__text-box {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .portfolio__container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 20px auto;
+    gap: 10px;
+  }
+
+  .contact__info {
+    grid-template-columns: 1fr 1fr;
+  }
 }
