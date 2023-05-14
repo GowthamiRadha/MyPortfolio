@@ -344,3 +344,28 @@ html {
 		overflow:hidden;
 	}
 }
+
+@media screen and (max-width: 768px) {
+  .about__container {
+    justify-content: center;
+  }
+
+  .portfolio__container {
+    justify-content: center;
+  }
+
+  .portfolio-item {
+    flex: 0 0 calc(50% - 20px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container {
+    padding: 10px;
+  }
+
+  .portfolio-item {
+    flex: 0 0 100%;
+  }
+}
+
