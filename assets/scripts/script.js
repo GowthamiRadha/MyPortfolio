@@ -61,8 +61,16 @@ function type() {
   if (index < text.length) {
     document.getElementById("availability-text").innerHTML += text.charAt(index);
     index++;
-    setTimeout(type, 50);
+    setTimeout(type, 30);
   }
 }
 
-type();
+function startTyping() {
+  // Clear the text and reset the index
+  document.getElementById("availability-text").innerHTML = "";
+  index = 0;
+  
+  // Start typing animation
+  type();
+}
+
