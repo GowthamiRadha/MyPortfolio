@@ -35,7 +35,7 @@ html {
   list-style-type: none;
   margin-left: auto;
   padding: 10px;
-  overflow: auto;
+  overflow-x: auto;
   white-space: nowrap;
 }
 
@@ -47,7 +47,6 @@ html {
   font-weight: 300;
   padding: 14px 16px;
   transition: color 0.3s ease;
-  white-space: nowrap;
 }
 
 /* Add hover effect on menu items */
@@ -95,6 +94,7 @@ html {
   height: 400px;
   width: 400px;
   border-radius: 50%;
+  overflow: hidden;
 }
 
 .about__subtitle {
@@ -162,7 +162,7 @@ html {
 .portfolio__container {
   display: grid;
   background: #fff;
-  gap: 10px;
+  gap: 30px;
   grid-template-columns: 1fr 1fr 1fr;
   max-width: 1000px;
   margin: 20px auto;
@@ -186,6 +186,8 @@ html {
   width: 300px;
   height:  200px;
   object-fit: cover;
+  border-radius: 20px;
+  border: 2px solid green;
 }
 
 .portfolio-item .overlay {
@@ -205,6 +207,7 @@ html {
 
 .portfolio-item:hover .overlay {
   transform: scale(1);
+  border-radius: 20px;
 }
 
 .portfolio-item-meta {
@@ -238,7 +241,7 @@ html {
 .portfolio-heading h2 {
   font-size: 30px;
   font-weight: bold;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 @keyframes animateBg {
@@ -270,10 +273,31 @@ html {
 
 .contact__info {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 2rem;
   justify-content: center;
-  margin-top: 50px; /* add some top margin to separate from the Portfolio section */
+  margin-top: 50px;
+}
+
+.contact__info > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  height: 150px;
+  border: 2px solid #000;
+  border-radius: 10px;
+  margin: 10px;
+  background-color: rgba(122, 199, 138, 0.4); /* Adjust the opacity value (0.2) as desired */
+  color: white;
+}
+
+.contact__info > div .contact__icon {
+  font-size: 4rem;
+  margin-bottom: 0.5rem;
+  color: black;
+  background-color: transparent;
 }
 
 .contact__icon.big-icon {
@@ -283,8 +307,8 @@ html {
 }
 
 .medium-icon {
-  width: 110px;
-  height: 60px;
+  width: 250px;
+  height: 200px;
 }
 
 .popup {
