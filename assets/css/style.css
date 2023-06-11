@@ -243,6 +243,37 @@ html {
   margin-bottom: 30px;
 }
 
+.sticky-banner {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #7ac78a;
+  padding: 10px;
+  text-align: center;
+  font-size: 12px;
+  z-index: 9999;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.heart {
+  display: inline-block;
+  animation: heartbeat 2s infinite;
+}
+
+
+
 @keyframes animateBg {
   0% {
     background-position: 0 0;

@@ -48,10 +48,23 @@ document.addEventListener("DOMContentLoaded", function () {
 
 const emailIcon = document.getElementById('email-icon');
 
-emailIcon.addEventListener('click', function(e) {
+emailIcon.addEventListener('click', function (e) {
   e.preventDefault();
+  
+  const emailAddress = emailIcon.getAttribute('href');
+  copyToClipboard(emailAddress);
   alert('Email is Copied!');
 });
+
+function copyToClipboard(text) {
+  const tempInput = document.createElement('input');
+  tempInput.value = text;
+  document.body.appendChild(tempInput);
+  tempInput.select();
+  document.execCommand('copy');
+  document.body.removeChild(tempInput);
+}
+
 
 
 const text = "I am actively seeking internship/co-op opportunities for Fall 2023 and full-time positions starting from December 2023.";
