@@ -67,7 +67,7 @@ function copyToClipboard(text) {
 
 
 
-const text = "I am actively seeking internship/co-op opportunities for Fall 2023 and full-time positions starting from December 2023.";
+const text = "I am actively seeking full-time positions starting from January 2024.";
 let index = 0;
 
 function type() {
@@ -87,3 +87,35 @@ function startTyping() {
   type();
 }
 
+function initTypeWriter() {
+  var typedText = "Hello!!!";
+  var i = 0;
+  var speed = 500; // Speed in milliseconds
+  var elem = document.getElementById("typed-text");
+  var cursor = document.getElementById("cursor");
+
+  elem.innerHTML = ""; // Clear the text
+
+  // Make cursor visible
+  cursor.style.display = "inline";
+  cursor.classList.add("blinking-cursor");
+  
+  function typeWriter() {
+    if (i < typedText.length) {
+      elem.innerHTML += typedText.charAt(i);
+      i++;
+      setTimeout(typeWriter, speed);
+    } else {
+      // Remove cursor when typing is done
+      cursor.style.display = "none";
+      cursor.classList.remove("blinking-cursor");
+    }
+  }
+
+  typeWriter();
+}
+
+// Initialize the typing effect when the document is fully loaded
+document.addEventListener('DOMContentLoaded', function() {
+  initTypeWriter();
+});

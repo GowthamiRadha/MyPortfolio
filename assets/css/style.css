@@ -285,6 +285,29 @@ html {
   }
 }
 
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 1em; /* Adjust the size according to your needs */
+  color: black;
+  -webkit-animation: blink 0.7s infinite;
+  -moz-animation: blink 0.7s infinite;
+  -ms-animation: blink 0.7s infinite;
+  -o-animation: blink 0.7s infinite;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 .contact {
   padding: 100px 0;
   text-align: center;
